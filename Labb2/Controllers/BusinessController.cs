@@ -12,6 +12,7 @@ namespace Labb2.Controllers
         public ActionResult Index()
         {
             // testar
+            //Test igen11
             return View();
         }
     }
