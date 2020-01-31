@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb2", "Labb2\Labb2.csproj", "{D8964A5C-3117-4931-AE34-E9D587999165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebbApplikation", "Labb2\WebbApplikation.csproj", "{D8964A5C-3117-4931-AE34-E9D587999165}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagerService", "LagerService\LagerService.csproj", "{C16EAC4F-3583-4D05-BC44-A6FF8B7D160B}"
 EndProject
