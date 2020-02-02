@@ -15,5 +15,7 @@ namespace LagerService
         public string Namn { get; set; }
 
         public double? Pris { get; set; }
+
+        public int? Antal { get; set; }
     }
 }
