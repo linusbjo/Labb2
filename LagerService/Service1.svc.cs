@@ -16,18 +16,11 @@ namespace LagerService
         {
             return string.Format("You entered: {0}", value);
         }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public List<Vara> GetListVara()
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            // Creates a list of table "Vara" and returns it
+            LagerServiceDatabaseEntityDataModel db = new LagerServiceDatabaseEntityDataModel();
+            return db.Vara.ToList();
         }
     }
 }
