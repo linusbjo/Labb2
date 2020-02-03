@@ -16,6 +16,8 @@ namespace LagerService
 
         public double? Pris { get; set; }
 
-        public int? Antal { get; set; }
+        public int? ButikAntal { get; set; }
+
+        public int? LagerAntal { get; set; }
     }
 }
