@@ -11,10 +11,6 @@ namespace Labb2.Controllers
         // GET: Business
         public ActionResult Index()
         {
-            // testar
-
-            // Marcs kommentar ma fackkkkaaaas
-            //Test igen11
             return View();
         }
     }
