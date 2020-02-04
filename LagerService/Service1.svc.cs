@@ -12,15 +12,14 @@ namespace LagerService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
         public List<Vara> GetListVara()
         {
             // Creates a list of table "Vara" and returns it
+            List<Vara> VaraList = new List<Vara>();
             LagerServiceDatabaseEntityDataModel db = new LagerServiceDatabaseEntityDataModel();
-            return db.Vara.ToList();
+
+            VaraList = db.Vara.ToList();
+            return VaraList;
         }
     }
 }

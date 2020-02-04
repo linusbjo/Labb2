@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebbApplikation.Models;
+using Labb2;
 
 namespace WebbApplikation.Controllers
 {
@@ -12,9 +13,9 @@ namespace WebbApplikation.Controllers
         // GET: Business
         public ActionResult Index()
         {
-           // ArticleService.Service1Client client = new ArticleService.Service1Client();
+            ArticleService.Service1Client client = new ArticleService.Service1Client();
 
-            return View();
+            return View(model);
         }
     }
 }
