@@ -5,13 +5,15 @@ using System.Web;
 using System.Web.Mvc;
 using Labb2.Models;
 
-namespace Labb2.Controllers
+namespace WebbApplikation.Controllers
 {
     public class BusinessController : Controller
     {
         // GET: Business
         public ActionResult Index()
         {
+            ArticleService.Service1Client client = new ArticleService.Service1Client();
+
             return View();
         }
     }
