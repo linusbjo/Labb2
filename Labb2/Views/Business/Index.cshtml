@@ -5,28 +5,30 @@
 }
 
 <h2>Index</h2>
-<table border="1">
 
+<table class="table table-dark">
 
-	<tr>
-		<th>Namn</th>
-		<th>Pris</th>
-		<th>Antal</th>
-	</tr>
-	<tr>
-		<td>Billy</td>
-		<td>200</td>
-		<td>20</td>
-	</tr>
-
-	@*@foreach (var item in Model.VaraList)
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Namn</th>
+			<th scope="col">Pris</th>
+			<th scope="col">Antal</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.VaraList)
 		{
 
 			<tr>
+				<td>@item.ID</td>
 				<td>@item.Namn</td>
 				<td>@item.Pris</td>
 				<td>@item.ButikAntal</td>
 			</tr>
 
-		}*@
+		}
+		
+	</tbody>
 </table>
+
