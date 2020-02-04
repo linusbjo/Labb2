@@ -1,10 +1,32 @@
-﻿
+﻿@model WebbApplikation.Models.BusinessViewModel
 @{
 	ViewBag.Title = "Index";
 	Layout = "~/Views/_MasterPage.cshtml";
 }
 
 <h2>Index</h2>
+<table border="1">
 
-@foreach (var item in) 
-	{ }
+
+	<tr>
+		<th>Namn</th>
+		<th>Pris</th>
+		<th>Antal</th>
+	</tr>
+	<tr>
+		<td>Billy</td>
+		<td>200</td>
+		<td>20</td>
+	</tr>
+
+	@*@foreach (var item in Model.VaraList)
+		{
+
+			<tr>
+				<td>@item.Namn</td>
+				<td>@item.Pris</td>
+				<td>@item.ButikAntal</td>
+			</tr>
+
+		}*@
+</table>
