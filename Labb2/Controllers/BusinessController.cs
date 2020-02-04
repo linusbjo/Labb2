@@ -20,6 +20,7 @@ namespace WebbApplikation.Controllers
             Labb2.LagerServiceReference.Service1Client client = new Labb2.LagerServiceReference.Service1Client();
             var temp = client.GetListVara();
 
+            // Hej
             foreach (var item in temp)
             {
                 Vara TempVara = new Vara();
