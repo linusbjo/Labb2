@@ -92,10 +92,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ArticleService\Service1.disco" />
-    <None Include="Connected Services\ArticleService\configuration91.svcinfo" />
-    <None Include="Connected Services\ArticleService\configuration.svcinfo" />
-    <None Include="Connected Services\ArticleService\Reference.svcmap">
+    <Content Include="Connected Services\LagerServiceReference\Labb2.LagerServiceReference.Vara.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\LagerServiceReference\Service1.disco" />
+    <None Include="Connected Services\LagerServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\LagerServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\LagerServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -129,11 +132,14 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="Connected Services\ArticleService\Service1.wsdl" />
-    <None Include="Connected Services\ArticleService\Service1.xsd">
+    <None Include="Connected Services\LagerServiceReference\Service1.wsdl" />
+    <None Include="Connected Services\LagerServiceReference\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ArticleService\Service11.xsd">
+    <None Include="Connected Services\LagerServiceReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LagerServiceReference\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -216,7 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\ArticleService\Reference.cs">
+    <Compile Include="Connected Services\LagerServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -266,7 +272,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ArticleService\" />
+    <WCFMetadataStorage Include="Connected Services\LagerServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
