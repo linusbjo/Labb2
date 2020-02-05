@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebbApplikation", "Labb2\WebbApplikation.csproj", "{D8964A5C-3117-4931-AE34-E9D587999165}"
 	ProjectSection(ProjectDependencies) = postProject
+		{C16EAC4F-3583-4D05-BC44-A6FF8B7D160B} = {C16EAC4F-3583-4D05-BC44-A6FF8B7D160B}
 		{90C5D484-A577-414C-87CD-85A0690C7D16} = {90C5D484-A577-414C-87CD-85A0690C7D16}
 	EndProjectSection
 EndProject

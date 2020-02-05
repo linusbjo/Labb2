@@ -11,10 +11,10 @@ namespace WebbApplikation.Models
 
         public string Namn { get; set; }
 
-        public double Pris { get; set; }
+        public double? Pris { get; set; }
 
-        public int ButikAntal { get; set; }
+        public int? ButikAntal { get; set; }
 
-        public int LagerAntal { get; set; }
+        public int? LagerAntal { get; set; }
     }
 }
