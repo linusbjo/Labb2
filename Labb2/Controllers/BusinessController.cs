@@ -11,7 +11,6 @@ namespace WebbApplikation.Controllers
         // GET: Business
         public ActionResult Index()
         {
-            ArticleService.Service1Client client = new ArticleService.Service1Client();
 
             return View();
         }
