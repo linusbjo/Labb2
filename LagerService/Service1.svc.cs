@@ -26,8 +26,8 @@ namespace LagerService
             LagerServiceDatabaseEntityDataModel db = new LagerServiceDatabaseEntityDataModel();
             int articleAmount; // Variable used for LagerAntal
 
-            var VaraData = db.Vara.Find(ID);
-
+            Vara VaraData = db.Vara.Find(ID);
+            
             try
             {
                 articleAmount = Convert.ToInt32(VaraData.LagerAntal);

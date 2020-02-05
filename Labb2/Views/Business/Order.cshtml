@@ -10,8 +10,12 @@
 
 @using (Html.BeginForm("OrderMade", "Business", FormMethod.Post))
 {
-<input type="number" name="antal" />
-<button type="submit">Submit</button>
+    <p>ID</p>
+    <input type="number" value="@Model.ID" name="ID" readonly />
+    <p>Antal</p>
+    <input type="number" name="antal" max="50"/>
+
+    <button type="submit">Submit</button>
 }
 
 

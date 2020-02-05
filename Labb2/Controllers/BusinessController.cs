@@ -62,8 +62,10 @@ namespace WebbApplikation.Controllers
         public ActionResult OrderMade(FormCollection collection)
         {
             int antal = Convert.ToInt32(collection["antal"]);
+            int id = Convert.ToInt32(collection["ID"]);
 
-            //TODO: Lägg in logik koppling till LagerService
+            Labb2.LagerServiceReference.Service1Client client = new Labb2.LagerServiceReference.Service1Client();
+            client.OrderVaraFromStorage(id, antal);
 
             return RedirectToAction("Index");
         }
