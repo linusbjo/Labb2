@@ -8,5 +8,6 @@ namespace WebbApplikation.Models
     public class BusinessViewModel
     {
         public List<Vara> VaraList { get; set; }
+        public Vara SelectedVara { get; set; }
     }
 }

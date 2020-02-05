@@ -13,16 +13,35 @@
   <wsdl:message name="IService1_GetListVara_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetListVaraResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_OrderVaraFromStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderVaraFromStorage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OrderVaraFromStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderVaraFromStorageResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetListVara">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListVara" message="tns:IService1_GetListVara_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListVaraResponse" message="tns:IService1_GetListVara_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderVaraFromStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OrderVaraFromStorage" message="tns:IService1_OrderVaraFromStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OrderVaraFromStorageResponse" message="tns:IService1_OrderVaraFromStorage_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetListVara">
       <soap:operation soapAction="http://tempuri.org/IService1/GetListVara" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderVaraFromStorage">
+      <soap:operation soapAction="http://tempuri.org/IService1/OrderVaraFromStorage" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

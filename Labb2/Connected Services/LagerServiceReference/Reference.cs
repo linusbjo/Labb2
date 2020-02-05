@@ -131,6 +131,12 @@ namespace Labb2.LagerServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListVara", ReplyAction="http://tempuri.org/IService1/GetListVaraResponse")]
         System.Threading.Tasks.Task<Labb2.LagerServiceReference.Vara[]> GetListVaraAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/OrderVaraFromStorage", ReplyAction="http://tempuri.org/IService1/OrderVaraFromStorageResponse")]
+        void OrderVaraFromStorage(int ID, int Antal);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/OrderVaraFromStorage", ReplyAction="http://tempuri.org/IService1/OrderVaraFromStorageResponse")]
+        System.Threading.Tasks.Task OrderVaraFromStorageAsync(int ID, int Antal);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -166,6 +172,14 @@ namespace Labb2.LagerServiceReference {
         
         public System.Threading.Tasks.Task<Labb2.LagerServiceReference.Vara[]> GetListVaraAsync() {
             return base.Channel.GetListVaraAsync();
+        }
+        
+        public void OrderVaraFromStorage(int ID, int Antal) {
+            base.Channel.OrderVaraFromStorage(ID, Antal);
+        }
+        
+        public System.Threading.Tasks.Task OrderVaraFromStorageAsync(int ID, int Antal) {
+            return base.Channel.OrderVaraFromStorageAsync(ID, Antal);
         }
     }
 }

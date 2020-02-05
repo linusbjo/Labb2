@@ -1,8 +1,18 @@
-﻿@model WebbApplikation.Models.BusinessViewModel
+﻿@model WebbApplikation.Models.Vara
+
 @{
     ViewBag.Title = "Order";
-    Layout = "~/Views/Business/Index.cshtml";
+    Layout = "~/Views/_MasterPage.cshtml";
 }
+@Model.Namn
 
 <h2>Order</h2>
+
+@using (Html.BeginForm("OrderMade", "Business", FormMethod.Post))
+{
+<input type="number" name="antal" />
+<button type="submit">Submit</button>
+}
+
+
 

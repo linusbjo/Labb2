@@ -27,19 +27,18 @@
 	<tbody>
 		@foreach (var item in Model.VaraList)
 		{
-
 			<tr>
 				<td>@item.ID</td>
 				<td>@item.Namn</td>
 				<td>@item.Pris</td>
 				<td>@item.ButikAntal</td>
-				<td><a href="/Index/Order">Beställ</a></td>
-
+				<td>
+					<form action="/Business/Order" method="post">
+						<button type="submit" formaction="/Business/Order/@item.ID">Order</button>
+					</form>
+				</td>
 			</tr>
-
 		}
-		
-		
 	</tbody>
 </table>
 
