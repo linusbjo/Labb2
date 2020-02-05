@@ -252,6 +252,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\_MasterPage.cshtml" />
     <Content Include="Views\Business\Index.cshtml" />
+    <Content Include="Views\Business\Order.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

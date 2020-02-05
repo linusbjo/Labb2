@@ -37,5 +37,10 @@ namespace WebbApplikation.Controllers
 
             return View(model);
         }
+        public ActionResult Order(int Id)
+        {
+            
+            return View();
+        }
     }
 }
