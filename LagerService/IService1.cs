@@ -14,5 +14,8 @@ namespace LagerService
     {      
         [OperationContract]
         List<Vara> GetListVara();
+
+        [OperationContract]
+        void OrderVaraFromStorage(int ID, int Antal);
     }
 }
