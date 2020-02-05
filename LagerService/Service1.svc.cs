@@ -14,7 +14,7 @@ namespace LagerService
     {
         public List<Vara> GetListVara()
         {
-            // Creates a list of table "Vara" and returns it
+            // Creates a list of table "Vara" and returns it as ToList()
             List<Vara> VaraList = new List<Vara>();
             LagerServiceDatabaseEntityDataModel db = new LagerServiceDatabaseEntityDataModel();
 
@@ -24,29 +24,31 @@ namespace LagerService
         public void OrderVaraFromStorage(int ID, int ArticlesOrderedTotal)
         {
             LagerServiceDatabaseEntityDataModel db = new LagerServiceDatabaseEntityDataModel();
-            int LagerAntalConvertedInt; // Variable used for LagerAntal
+            int articleAmount; // Variable used for LagerAntal
 
-            var UpdatedVara = db.Vara.Find(ID);
+            var VaraData = db.Vara.Find(ID);
 
             try
             {
-                LagerAntalConvertedInt = Convert.ToInt32(UpdatedVara.LagerAntal);
+                articleAmount = Convert.ToInt32(VaraData.LagerAntal);
             }
             catch
             {
-                LagerAntalConvertedInt = 0;
+                articleAmount = 0;
             }
 
             // If storage lacks the required items
-            if (ArticlesOrderedTotal > LagerAntalConvertedInt)
-            {            
-                // TODO: Skapa koppling till grossist jäveln
+            if (ArticlesOrderedTotal > articleAmount)
+            {
+                GrossistServiceReference.Service1Client grossistConnection = new GrossistServiceReference.Service1Client();
+                VaraData.LagerAntal += grossistConnection.AddArticle();
+                VaraData.LagerAntal -= ArticlesOrderedTotal;
+                VaraData.ButikAntal += ArticlesOrderedTotal;
             }
-            
-            // If storage contains required items
             else
             {
-                // TODO: Skapa koppling till grossist jäveln
+                VaraData.LagerAntal -= ArticlesOrderedTotal;
+                VaraData.ButikAntal += ArticlesOrderedTotal;
             }
 
             db.SaveChanges();

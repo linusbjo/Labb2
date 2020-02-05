@@ -13,9 +13,9 @@ namespace GrossistService
     public class Service1 : IService1
     {
         ArticleService.Service1Client client = new ArticleService.Service1Client();
-        public int AddArticle(int articleAmount)
+        public int AddArticle()
         {
-            return articleAmount += 50;
+            return 50;
         }
     }
 }

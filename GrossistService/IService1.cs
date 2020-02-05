@@ -13,6 +13,6 @@ namespace GrossistService
     public interface IService1
     {
         [OperationContract]
-        int AddArticle(int article);
+        int AddArticle();
     }
 }
