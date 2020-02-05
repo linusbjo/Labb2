@@ -10,7 +10,7 @@
 <h1>Välkommen!</h1>
 <br/><br/>
 
-<p>Tabell över burikens varor:</p>
+<p>Tabell över butikens varor:</p>
 </div>
 
 <table class="table table-dark">
@@ -20,7 +20,7 @@
 			<th scope="col">#</th>
 			<th scope="col">Namn</th>
 			<th scope="col">Pris</th>
-			<th scope="col">Antal</th>
+			<th scope="col">Lagersaldo</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -34,7 +34,7 @@
 				<td>@item.ButikAntal</td>
 				<td>
 					<form action="/Business/Order" method="post">
-						<button type="submit" formaction="/Business/Order/@item.ID">Order</button>
+						<button type="submit" formaction="/Business/Order/@item.ID">Beställ</button>
 					</form>
 				</td>
 			</tr>
