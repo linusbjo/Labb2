@@ -4,7 +4,14 @@
 	Layout = "~/Views/_MasterPage.cshtml";
 }
 
-<h2>Index</h2>
+<h2>WEBBUTIKEN</h2>
+<br />
+<div>
+<h1>Välkommen!</h1>
+<br/><br/>
+
+<p>Tabell över burikens varor:</p>
+</div>
 
 <table class="table table-dark">
 
@@ -14,6 +21,7 @@
 			<th scope="col">Namn</th>
 			<th scope="col">Pris</th>
 			<th scope="col">Antal</th>
+			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -25,9 +33,12 @@
 				<td>@item.Namn</td>
 				<td>@item.Pris</td>
 				<td>@item.ButikAntal</td>
+				<td><a href="www.exempel.com">Beställ</a></td>
+
 			</tr>
 
 		}
+		
 		
 	</tbody>
 </table>
