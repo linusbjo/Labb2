@@ -4,19 +4,26 @@
     ViewBag.Title = "Order";
     Layout = "~/Views/_MasterPage.cshtml";
 }
-@Model.Namn
+<div class="container-fluid">
+    <div class="container">
+        <h2>Order</h2>
 
-<h2>Order</h2>
+        <p>Artikel: @Model.Namn</p>
 
-@using (Html.BeginForm("OrderMade", "Business", FormMethod.Post))
-{
-    <p>ID</p>
-    <input type="number" value="@Model.ID" name="ID" readonly />
-    <p>Antal</p>
-    <input type="number" name="antal" max="50"/>
-
-    <button type="submit">Submit</button>
-}
-
+        @using (Html.BeginForm("OrderMade", "Business", FormMethod.Post))
+        {
+    <div class="form-control-sm">
+        <label for="numberID">ID</label>
+        <input type="number" value="@Model.ID" name="numberID" readonly class="form-control" />
+        <br />
+        <label for="antalID">Antal</label>
+        <input type="number" name="antal" max="50" class="form-control" id="antalID" />
+        <br />
+        <button type="submit" class="btn-primary">Beställ</button>
+    </div>
+           
+        }
+    </div>
+</div>
 
 
