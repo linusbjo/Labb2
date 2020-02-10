@@ -1,5 +1,4 @@
-# Labb2
-Error launching application: 
+# Error launching application: 
 
 There may be an error laucnhing that says "C:\B8akWorkspace\B8akProject\B8akSolution\B8AK.Portal\bin\roslyn\csc.exe" is missing. 
 Follow steps below: 
